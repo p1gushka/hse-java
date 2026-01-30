@@ -1,12 +1,10 @@
 package hse.java.practice.task1;
 
-import java.awt.*;
 import java.util.Arrays;
-import java.util.Random;
 
 public class Edge {
 
-    private final CubeColor[][] parts;
+    private CubeColor[][] parts;
 
     public Edge(CubeColor[][] parts) {
         this.parts = parts;
@@ -27,6 +25,10 @@ public class Edge {
 
     public CubeColor[][] getParts() {
         return parts;
+    }
+
+    public void setParts(CubeColor[][] parts) {
+        this.parts = parts;
     }
 
     @Override
