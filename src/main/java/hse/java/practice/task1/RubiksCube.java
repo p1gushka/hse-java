@@ -33,7 +33,7 @@ public class RubiksCube implements Cube {
             }
         }
 
-        edges[4].setParts(partsCopy);
+        edges[position.ordinal()].setParts(partsCopy);
     }
 
     @Override
@@ -138,7 +138,7 @@ public class RubiksCube implements Cube {
             upParts[i][0] = leftPartsCopy[2-i][2];
             rightParts[i][0] = upPartsCopy[i][0];
             downParts[i][0] = rightPartsCopy[i][0];
-            leftParts[i][2] = downPartsCopy[0][2-i];
+            leftParts[i][2] = downPartsCopy[2-i][0];
         }
     }
 
