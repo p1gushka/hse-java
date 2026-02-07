@@ -25,15 +25,15 @@ public class RubiksCube implements Cube {
 
     private void rotateInnerClockwise(EdgePosition position) {
         CubeColor[][] parts = edges[position.ordinal()].getParts();
-        CubeColor[][] newParts = new CubeColor[3][3];
+        CubeColor[][] partsCopy = new CubeColor[3][3];
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                newParts[2 - j][i] = parts[i][j];
+                partsCopy[j][2-i] = parts[i][j];
             }
         }
 
-        edges[4].setParts(newParts);
+        edges[4].setParts(partsCopy);
     }
 
     @Override
